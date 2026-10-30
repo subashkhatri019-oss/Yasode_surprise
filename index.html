@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Yasode ❤️</title>
+<style>
+:root{--pink:#ff5c9a;--deep:#180d35;--soft:#fff0f6}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#fff;overflow:hidden}
+.page{display:none;min-height:100vh;width:100%;padding:28px 20px;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+.page.active{display:flex;animation:fade .7s ease}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.card{width:min(92vw,560px);padding:30px 22px;border-radius:28px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);box-shadow:0 18px 60px #0003;backdrop-filter:blur(10px);position:relative;z-index:2}
+h1{font-size:clamp(2rem,7vw,3.3rem);line-height:1.15;margin:12px 0 18px}
+p{font-size:clamp(1.05rem,3.8vw,1.28rem);line-height:1.7;white-space:pre-line}
+button{border:0;border-radius:999px;padding:13px 25px;font-size:1.08rem;font-weight:800;cursor:pointer;transition:transform .25s ease,opacity .25s ease, padding .25s ease;box-shadow:0 8px 22px #0002}
+button:active{transform:scale(.96)}
+.buttons{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;margin-top:22px}
+.yes{background:#ff4f91;color:#fff}
+.no{background:#fff;color:#8e4267}
+.next{background:#fff;color:#9b3d72;margin-top:20px}
+.kitty{font-size:clamp(4.8rem,20vw,7rem);filter:drop-shadow(0 8px 10px #0002);animation:bob 2.3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.pink-bg{background:radial-gradient(circle at 50% 20%,#ffd4e7,#ff8db9 48%,#c94f91)}
+.pink-bg:before,.pink-bg:after{content:"";position:absolute;border-radius:50%;background:#fff3;filter:blur(1px)}
+.pink-bg:before{width:260px;height:260px;left:-100px;bottom:-70px}
+.pink-bg:after{width:190px;height:190px;right:-65px;top:-45px}
+.message-bg{background:linear-gradient(145deg,#32143f,#a33c77 55%,#f58ab5)}
+.moon-bg{background:linear-gradient(#07122f,#152b57 58%,#34224f)}
+.stars{position:absolute;inset:0;pointer-events:none}
+.star{position:absolute;color:#fff;font-size:var(--s);opacity:.8;animation:twinkle var(--d) ease-in-out infinite alternate}
+@keyframes twinkle{from{opacity:.25;transform:scale(.75)}to{opacity:1;transform:scale(1.25)}}
+.moon{width:clamp(150px,43vw,245px);aspect-ratio:1;border-radius:50%;margin:0 auto 24px;background:radial-gradient(circle at 35% 30%,#fff 0,#fff9d8 42%,#f4d98e 72%,#d6b66c 100%);box-shadow:0 0 28px #fff9,0 0 85px #dce8ff88;position:relative}
+.moon:before,.moon:after{content:"";position:absolute;border-radius:50%;background:#d9c68d55}
+.moon:before{width:19%;height:19%;left:25%;top:28%}
+.moon:after{width:12%;height:12%;right:25%;bottom:26%}
+.moon-caption{font-size:clamp(1.2rem,4vw,1.55rem);font-weight:700;color:#fff4d7}
+.final-bg{background:radial-gradient(circle at 50% 20%,#ffb6d2,#ee6b9f 50%,#7b285f)}
+.confetti{font-size:2.4rem;letter-spacing:8px;animation:bob 2s infinite}
+.small-note{font-size:.9rem;opacity:.85;margin-top:14px}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<section id="page1" class="page pink-bg active">
+ <div class="stars" id="pinkStars"></div>
+ <main class="card">
+  <div class="kitty" aria-hidden="true">🐱</div>
+  <h1>Do you love me?</h1>
+  <p>Choose carefully, Yasode 💗</p>
+  <div class="buttons">
+   <button class="yes" id="firstYes">YES 💗</button>
+   <button class="no" id="firstNo">NO 🥲</button>
+  </div>
+ </main>
+</section>
+
+<section id="page2" class="page message-bg">
+ <div class="stars" id="heartStars"></div>
+ <main class="card">
+  <div class="confetti">💗 🥺 💗</div>
+  <h1>Sorry Yasode 🥲</h1>
+  <p>Sorry yasode aba bata Testo kei vandai na video banau vanera haii maf gardayu aba bolnu na haii dherai Kura garnu xa hajur sanga .
+Sorry sorry sorry sorry sorry sorry 🥲Aba bolnu haii yasode.
+Sorry yasode 🥲</p>
+  <button class="next" data-next="page3">NEXT ❤️</button>
+ </main>
+</section>
+
+<section id="page3" class="page moon-bg">
+ <div class="stars" id="nightStars"></div>
+ <main class="card">
+  <div class="moon" aria-label="Full moon"></div>
+  <div class="moon-caption">Hernu hajur KO lagi jun Ra tara ✨</div>
+  <button class="next" data-next="page4">NEXT ❤️</button>
+ </main>
+</section>
+
+<section id="page4" class="page message-bg">
+ <div class="stars" id="questionStars"></div>
+ <main class="card">
+  <div class="confetti">🌙 ✨ 💗</div>
+  <h1>Will you be my forever Yasode?</h1>
+  <div class="buttons" id="foreverButtons">
+   <button class="yes" id="foreverYes">YES 💗</button>
+   <button class="no" id="foreverNo">NO 🥲</button>
+  </div>
+  <p class="small-note" id="littleHint">Choose one 🥺</p>
+ </main>
+</section>
+
+<section id="page5" class="page final-bg">
+ <div class="stars" id="finalStars"></div>
+ <main class="card">
+  <div class="confetti">🎉 💖 🥳</div>
+  <h1>Congratulations!</h1>
+  <p style="font-size:clamp(1.25rem,4.5vw,1.7rem);font-weight:800">Aba Timi lai Khatri Niwas ma welcome xa ❤️🏡</p>
+  <div class="confetti">✨ 💗 ✨</div>
+ </main>
+</section>
+<script>
+function showPage(id){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+}
+function addStars(id,count){
+ const holder=document.getElementById(id);
+ for(let i=0;i<count;i++){
+  const s=document.createElement('span');s.className='star';s.textContent=Math.random()>.5?'✦':'·';
+  s.style.left=(Math.random()*100)+'%';s.style.top=(Math.random()*100)+'%';
+  s.style.setProperty('--s',(8+Math.random()*17)+'px');s.style.setProperty('--d',(1.1+Math.random()*2.5)+'s');
+  holder.appendChild(s);
+ }
+}
+['pinkStars','heartStars','nightStars','questionStars','finalStars'].forEach(id=>addStars(id,55));
+document.getElementById('firstYes').addEventListener('click',()=>showPage('page2'));
+let firstNoCount=0;
+document.getElementById('firstNo').addEventListener('click',()=>{
+ firstNoCount++;
+ const no=document.getElementById('firstNo'),yes=document.getElementById('firstYes');
+ no.style.transform=`scale(${Math.max(.42,1-firstNoCount*.14)})`;
+ yes.style.transform=`scale(${1+firstNoCount*.13})`;
+ if(firstNoCount>=4){no.style.display='none';yes.style.transform='scale(1.45)'}
+});
+document.querySelectorAll('[data-next]').forEach(btn=>btn.addEventListener('click',()=>showPage(btn.dataset.next)));
+let noCount=0;
+document.getElementById('foreverNo').addEventListener('click',()=>{
+ noCount++;
+ const no=document.getElementById('foreverNo'),yes=document.getElementById('foreverYes');
+ no.style.transform=`scale(${Math.max(.35,1-noCount*.16)})`;
+ yes.style.transform=`scale(${1+noCount*.16})`;
+ document.getElementById('littleHint').textContent=noCount>=4?'Only YES remains 💗':'Are you sure? 🥺';
+ if(noCount>=4){no.style.display='none';yes.style.transform='scale(1.5)'}
+});
+document.getElementById('foreverYes').addEventListener('click',()=>showPage('page5'));
+</script>
+</body>
+</html>
